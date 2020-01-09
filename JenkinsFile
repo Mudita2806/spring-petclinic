@@ -1,0 +1,11 @@
+pipeline{
+  agent any
+  stages{
+    stage('Welcome'){
+      git 'https://github.com/Mudita2806/spring-petclinic'
+    }
+    stage('Maven Build'){
+      sh "mvn clean package"
+    }
+  }
+}
