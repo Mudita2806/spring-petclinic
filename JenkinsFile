@@ -17,7 +17,7 @@ pipeline{
     stage('Tomcat Dev Deploy'){
       steps{
         sh """
-          cp target/petclinic.jar /usr/share/tomcat8/webapps/
+          cp -rf target/petclinic.jar /usr/share/tomcat8/webapps/
           sh /usr/share/tomcat8/bin/shutdown.sh
           sh /usr/share/tomcat8/bin/startup.sh
         """
