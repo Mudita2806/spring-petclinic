@@ -19,6 +19,7 @@ pipeline{
         sh """
         echo "Success"
         echo "Im good"
+        echo "hi there"
         """
       }
     }
